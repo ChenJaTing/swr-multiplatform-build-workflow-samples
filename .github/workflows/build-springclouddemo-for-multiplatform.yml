@@ -3,7 +3,7 @@ name: Build Spring Cloud demo for multiplatform
 on:
   push:
     branches: 
-    - 'master'
+    - 'master1'
 
 jobs:
   build:
