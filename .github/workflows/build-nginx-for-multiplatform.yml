@@ -3,7 +3,7 @@ name: Build Nginx for multiplatform
 on:
   push:
     branches: 
-    - 'master1'
+    - 'master'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
     - name: Build Nginx image for linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/mips64le,linux/ppc64le,linux/s390x
       uses: huaweicloud/swr-multiplatform-build-action@v1.2.0
       with:
-        image_tag: swr.cn-north-4.myhuaweicloud.com/hcloudcli/nginx:nginx-12-v1.0.0.1
+        image_tag: swr.cn-north-4.myhuaweicloud.com/hcloudcli/nginx:nginx-12-v1.2.0.1
         platforms: linux/386,linux/amd64,linux/arm/v5,linux/arm/v7,linux/arm64/v8,linux/mips64le,linux/ppc64le,linux/s390x
         use_latest_buildx: true
         push: true
