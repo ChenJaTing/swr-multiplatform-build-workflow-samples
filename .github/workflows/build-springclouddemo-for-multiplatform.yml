@@ -3,7 +3,7 @@ name: Build Spring Cloud demo for multiplatform
 on:
   push:
     branches: 
-    - 'master1'
+    - 'master'
 
 jobs:
   build:
@@ -35,9 +35,9 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Build Spring Cloud demo for linux/amd64,linux/arm64/v8,windows/amd64
-      uses: huaweicloud/swr-multiplatform-build-action@v1.2.0
+      uses: huaweicloud/swr-multiplatform-build-action@v1.2.1
       with:
-        image_tag: swr.cn-north-4.myhuaweicloud.com/hcloudcli/jdkdemo:jdk19-v1.2.0.1
+        image_tag: swr.cn-north-4.myhuaweicloud.com/hcloudcli/jdkdemo:jdk19-v1.2.1.1
         platforms: linux/amd64,linux/arm64/v8,windows/amd64
         use_latest_buildx: false
         push: true
